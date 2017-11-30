@@ -1,0 +1,230 @@
+body {
+  background-color: #f4f7f9;  
+} 
+  
+.container-response {
+  margin-top: 20px;
+  padding: 50px 15px;
+}
+
+.choice {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin: 20px 25px;
+  color: #95a5a6;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 5px solid #95a5a6;
+  height: 150px;
+  width: 150px;
+  vertical-align: middle;
+  transition: all .2s ease-in-out;
+}
+
+.choice .round {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  background-color: #95a5a6;
+  border: 5px solid #f4f7f9;
+  border-radius: 25px;
+  top: -25px;
+  left: 48.5px;
+}
+
+.fa-check{
+  transform: perspective(100px) translate3d(0px,0px,-1500px);
+  position: relative;
+  top: 5px;
+  font-size: 20px;
+  color: #fff;
+  transition: all .1s ease-in-out;
+}
+
+.choice:hover {
+  cursor: pointer;
+}
+
+.choice .notation {
+  position: absolute;
+  font-size: 60px;
+  left: 44.5px;
+  top: 40px;
+  color: #fff;
+  transform: scale(0);
+  transition: all .2s ease-in-out;
+  transition-delay: .1s;
+}
+
+.choice:hover .notation {
+  font-size: 60px;
+  transform: scale(1);
+}
+
+.choice p {
+  transform: scale(1);
+  position: relative;
+  transition: all .2s ease-in-out;
+}
+
+.choice:hover p {
+  transform: scale(0);
+  display: none;
+}
+
+
+
+/* SPECIFIC SPECIFIC SPECIFIC */
+.choice.one:hover {
+  border: 5px solid #e74c3c;
+  background-color: #e74c3c;
+}
+
+.choice.one.active {
+  border: 5px solid #e74c3c;
+}
+
+.choice.one.active .round {
+  background-color: #e74c3c;
+}
+
+.choice.one.active p{
+   color: #e74c3c;
+}
+
+/* CHOIX 2 */
+.choice.two:hover {
+  border: 5px solid #e67e22;
+  background-color: #e67e22;
+}
+
+.choice.two.active {
+  border: 5px solid #e67e22;
+}
+.choice.two.active p{
+   color: #e67e22;
+}
+
+.choice.two.active .round  {
+  background-color: #e67e22;
+}
+
+/* CHOIX 3 */
+.choice.three:hover {
+  border: 5px solid #1abc9c;
+  background-color: #1abc9c;
+}
+
+.choice.three p {
+  position: relative;
+  top: 8px;
+}
+
+.choice.three.active {
+  border: 5px solid #1abc9c;
+}
+
+.choice.three.active p {
+   color: #1abc9c;
+}
+
+.choice.three.active .round  {
+  background-color: #1abc9c;
+}
+
+/* CHOIX 4 */
+.choice.four:hover {
+  border: 5px solid #2ecc71;
+  background-color: #2ecc71;
+}
+
+.choice.four.active {
+  border: 5px solid #2ecc71;
+}
+
+.choice.four.active p {
+   color: #2ecc71;
+}
+
+.choice.four.active .round {
+  background-color: #2ecc71;
+}
+
+
+/* Animation Check */
+.choice.active .round .fa-check {
+  transform: perspective(100px) translate3d(0px,0px,0px);
+}
+
+.choice.active .round {
+  animation: bounce-check .2s forwards;
+}
+
+@keyframes bounce-check {
+  0% {
+    transform: scale(1);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: scale(0.6);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: scale(1);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: scale(0.74);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: scale(1);
+    animation-timing-function: ease-in;
+  }
+  89% {
+    transform: scale(0.85);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: scale(1);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+@-webkit-keyframes bulb {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.85, 1);
+            transform: scale3d(1.25, 0.85, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.15, 1);
+            transform: scale3d(0.75, 1.15, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.95, 1);
+            transform: scale3d(1.15, 0.95, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.10, 1);
+            transform: scale3d(0.95, 1.10, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.85, 1);
+            transform: scale3d(1.05, 0.85, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}

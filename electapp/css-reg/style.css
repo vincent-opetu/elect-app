@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  background: #25A3FF;
+  font-family: 'Roboto', sans-serif;
+}
+
+input.submit {
+  font-size: 100%;
+  line-height: 16px;
+  display: block;
+  width: 100%;
+  height: 42px;
+  cursor: pointer;
+  vertical-align: middle;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+  border: 0 solid rgba(0, 0, 0, 0.8);
+  background: #555;
+  margin-top: 0px;
+  box-shadow: 0 2px 0 #F5F5F5, 0 6px 0 #17BEBB;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+input.submit:hover {
+  background: #26547C;
+  box-shadow: 0 2px 0 #F5F5F5, 0 6px 0 #26547C, 0 8px 0 #F5F5F5, 0 11px 0 #26547C;
+  margin-top: -2px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+input.submit:active {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  margin-top: 15px;
+  box-shadow: 0 0px 0 #F5F5F5, 0 3px 0 #26547C, 0 0px 0 #F5F5F5, 0 6px 0 #26547C;
+}
+
+input:focus {
+  outline: none;
+}
+h1 {
+  position: relative;
+  color: #fff;
+  opacity: 0;
+  transition: .8s ease-in-out;
+}
+
+#progress {
+  position: absolute;
+  background: #0069ec;
+  height: 100vh;
+  width: 0;
+  transition: width 0.2s ease-in-out;
+}
+
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/******
+  Form
+ ******/
+
+#register {
+  background: #fff;
+  position: relative;
+  width: 410px;
+  padding: 2px 15px 20px 15px;
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+  transition: transform .1s ease-in-out;
+}
+
+#register.close {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: .8s ease-in-out;
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,0);
+}
+
+.next {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  font-size: 40px;
+  color: #25a3ff;
+  float: right;
+  cursor: pointer;
+}
+.next:hover {color: #333}
+.wrong .next {color: #ff2d26}
+.close .next {color: #fff}
+
+#inputContainer {
+  position: relative;
+  opacity: 0;
+  width: 350px;
+  margin-top: 25px;
+  transition: opacity .3s ease-in-out;
+}
+
+#inputContainer input {
+  width: 100%;
+  padding: 0 5px;
+  border: none;
+  font-size: 15px;
+  outline: 0;
+  background: transparent;
+  box-shadow:none;
+}
+
+#inputLabel {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  padding: 0 5px;
+  transition: .2s ease-in-out;
+}
+
+#inputContainer input:valid + #inputLabel {
+  top: -15px;
+  font-size: 11px;
+  font-weight: normal;
+  color: #9e9e9e;
+}
+
+#inputProgress {
+  position: absolute;
+  border-bottom: 2px solid #25a3ff;
+  padding: 3px 0;
+  width: 0;
+  transition: width .6s ease-in-out;
+}
+
+.wrong #inputProgress {
+  border-color: #ff2d26;
+}
+a{
+  text-decoration: none;
+}
